@@ -15,21 +15,25 @@ export default async function Home() {
     }
     const data = await res.json()
     console.log('Response', data)
+    const dataValue = [data]
   return (
     <main className={styles.main}>
       <h1>This is the test app </h1>
       location
       <div>
-        {newLocationData.map((item,key) => {
+        {dataValue.map((item,key) => {
           return(
           <div key={key}>
-          <h5>{item.city}</h5>
+          <li> City -  {item?.city}</li>
+          <li> ip - {item?.query}</li>
+          <li> lat - {item?.lat}</li>
+          <li> lon - {item?.lon}</li>
+          <li> country - {item?.country}</li>
+          <li>timezone - {item?.timezone}</li>
           </div>
         )})}
 
-{Object.values(data).map((value, index) => (
-          <li key={index}>{value}</li>
-        ))}
+
       </div>
     </main>
   )
