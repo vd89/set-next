@@ -1,11 +1,21 @@
+
+// 'use client'
+
 import styles from './page.module.css'
 import { newLocationData } from '../lib/constant'
 
 import { headers } from "next/headers";
+import ViewData from '../components/ViewComponentData';
 
 export default async function Home() {
 
   const _headers = headers()
+  const onChangeLocation =  async (_value: any) => {
+    "use server"
+    console.log('data value -> ', _value)
+   const dataChanges = _value
+
+   }
     const forwarded = _headers.get("x-forwarded-for");
     const ip =forwarded ? forwarded.split(/, /)[0] : _headers.get("x-real-ip")
     const res = await fetch(`http://ip-api.com/json/${ip}`)
@@ -20,6 +30,7 @@ export default async function Home() {
     <main className={styles.main}>
       <h1>This is the test app </h1>
       location
+      <ViewData changeLocation={onChangeLocation} dataChanges={'test stuff'}/>
       <div>
         {dataValue.map((item,key) => {
           return(
