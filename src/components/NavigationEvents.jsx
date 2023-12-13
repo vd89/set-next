@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useState } from "react";
-
 function NavigationEvents() {
   const [countryName, setCountryName] = useState({ latitude: null, longitude: null });
   const showCity = async position => {
@@ -24,7 +23,6 @@ function NavigationEvents() {
     }
   }, []);
 
-  // localStorage.setItem("country", JSON.stringify(countryName));
 
   return null;
 }
