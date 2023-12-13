@@ -1,0 +1,23 @@
+export const newLocationData = [{
+  "query": "59.95.102.207",
+  "status": "success",
+  "continent": "Asien",
+  "continentCode": "AS",
+  "country": "Indien",
+  "countryCode": "IN",
+  "region": "GJ",
+  "regionName": "Gujarat",
+  "city": "Rajkot",
+  "district": "",
+  "zip": "360006",
+  "lat": 22.2904,
+  "lon": 70.7915,
+  "timezone": "Asia/Kolkata",
+  "offset": 19800,
+  "currency": "INR",
+  "isp": "BSNL Internet",
+  "org": "NIB",
+  "as": "AS9829 National Internet Backbone",
+  "proxy": false,
+  "hosting": false
+}]
