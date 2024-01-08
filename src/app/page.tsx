@@ -19,6 +19,7 @@ export default async function Home() {
     const forwarded = _headers.get("x-forwarded-for");
     const ip =forwarded ? forwarded.split(/, /)[0] : _headers.get("x-real-ip")
     const res = await fetch(`http://ip-api.com/json/${ip}`)
+  console.log("test data",res)
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
       throw new Error('Failed to fetch data')
